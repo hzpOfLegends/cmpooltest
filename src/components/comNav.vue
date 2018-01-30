@@ -140,7 +140,7 @@
           <router-link to="/account/register">
           <el-dropdown-item command="signUp">{{$t('message.register[1]')}}</el-dropdown-item>
           </router-link>
-          <el-dropdown-item command="logOut">{{$t('message.register[2]')}}</el-dropdown-item>
+          <el-dropdown-item command="logOut" >{{$t('message.register[2]')}}</el-dropdown-item>
         </el-dropdown-menu>
       </el-dropdown>
       <el-dropdown style="float:right;margin-right:60px;line-height:60px" @command="handleCommand">
@@ -170,10 +170,10 @@ export default {
     }
   },
   mounted() {
-      var locales=JSON.parse(localStorage.getItem('locale'))
-      if(locales!=null){
-          this.locale=locales
-      }
+    var locales = JSON.parse(localStorage.getItem("locale"));
+    if (locales != null) {
+      this.locale = locales;
+    }
   },
   methods: {
     handleSelect(key, keyPath) {
@@ -182,15 +182,17 @@ export default {
     handleCommand(command) {
       //   this.$message(command);
       this.$i18n.locale = command;
-      localStorage.setItem('locale',JSON.stringify(command))
+      localStorage.setItem("locale", JSON.stringify(command));
     },
     register(command) {
-      var log = document.getElementById("log");
+      if (command == "logOut") {
+        localStorage.setItem("login", "no");
+        this.$router.push({ name: "homePage" });
+      }
       // if(this.locale && )
-      
     }
-  },
-  
+    
+  }
 };
 </script>
 
@@ -205,5 +207,4 @@ export default {
   line-height: 300px;
   margin: 0;
 }
-
 </style>

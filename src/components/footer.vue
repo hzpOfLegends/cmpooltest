@@ -26,6 +26,7 @@
     background-color: rgb(211, 220, 230);
     line-height: 60px;
     position: relative;
+    height: 60px;
     width: 100%;
     bottom: 0;
     left: 0;

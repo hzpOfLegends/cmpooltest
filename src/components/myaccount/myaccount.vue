@@ -1,9 +1,9 @@
 <template>
-  <el-container>
+  <el-container class="container">
         <el-header>
             <com-nav/>
         </el-header>
-        <el-container>
+        <el-container >
             <el-aside width="380px" style="margin:0 20px;margin-top:20px;">
                 <asided/>
             </el-aside>
@@ -33,9 +33,10 @@ export default {
   },
   beforeMount() {
     this.messageBox();
+    this.judgeLogin();
   },
   mounted() {
-    // this.judge();
+    
   },
   methods: {
     judge() {
@@ -74,7 +75,11 @@ export default {
         this.confirm = "確定";
         this.cancel = "取消";
       }
-      console.log(this.message);
+    },
+    judgeLogin(){
+      if(localStorage.getItem('login')!=="ok"){
+        this.judge();
+      }
     }
   },
   components: {
@@ -85,5 +90,7 @@ export default {
 };
 </script>
 <style>
-
+.container{
+  height: 100%;
+}
 </style>

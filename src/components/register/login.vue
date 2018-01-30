@@ -13,7 +13,7 @@
             clearable>
         </el-input>
         <div class="btn">
-            <el-button >{{$t('account.btn[0]')}}</el-button>
+            <el-button id="login" @click="login">{{$t('account.btn[0]')}}</el-button>
         </div>
         
         <div class="help">
@@ -28,6 +28,16 @@ export default {
       return {
           account: '',
           pwd:''
+      }
+  },
+  methods:{
+      login(){
+          if(this.account=="admin"&&this.pwd=="123456"){
+              localStorage.setItem('login',"ok");
+              this.$router.push({name:"myaccount"})
+          }else{
+              this.$message.error("账户或者密码有误")
+          }
       }
   }
 };
