@@ -3,7 +3,7 @@
       <el-menu  class="el-menu-demo" mode="horizontal" @select="handleSelect" style="text-align:left">
         <el-submenu index="1" >
             <template slot="title">{{$t("message.nav_title[0]")}}</template>
-            <router-link to="text">
+            <router-link to="/">
                 <el-menu-item index="1-1">
                 <i class="fa fa-home fa-fw"></i>
                 &nbsp;&nbsp;
@@ -80,7 +80,13 @@
             </el-menu-item>    
         </el-submenu>
         <el-submenu index="4">
-            <template slot="title">{{$t("message.nav_title[3]")}}</template>
+            
+            <template slot="title">
+                <router-link to="/myaccount" style="color:#909399;">
+                {{$t("message.nav_title[3]")}}
+                </router-link>
+                </template>
+            
             <router-link to="text">
                 <el-menu-item index="4-1">
                 <i class="fa fa-th-large fa-fw"></i>
@@ -115,11 +121,13 @@
                 <strong>{{$t("message.account[5]")}}</strong>
                 
             </el-menu-item>  
+            <router-link to="myaccount/accountSet">
             <el-menu-item index="4-7">
                 <i class="fa fa-cog fa-fw"></i>
                 &nbsp;&nbsp;
                 <strong>{{$t("message.account[6]")}}</strong>
             </el-menu-item>   
+            </router-link>
         </el-submenu>
         <el-dropdown style="float:right;line-height:60px"  @command="register">
         <span><i class="el-icon-setting" style="margin-right: 15px"></i>

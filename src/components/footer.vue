@@ -1,6 +1,6 @@
 <template>
 
-      <div>
+      <div class="foot">
           <p>{{$t('footer[0]')}}
               <a href="#">
                   <i class="fa fa-twitter"></i>
@@ -22,6 +22,12 @@
     
 </template>
 <style>
-
-
+.foot{
+    background-color: rgb(211, 220, 230);
+    line-height: 60px;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
 </style>

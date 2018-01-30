@@ -7,22 +7,17 @@
           <head-time/>
           <router-view></router-view>
       </el-main>
-      <div class="foot">
-          <footers/>
-      </div>
   </el-container>
 </template>
 <script>
 
 import headTime from "../headTime.vue";
 import comNav from "../comNav.vue";
-import footers from "../footer.vue";
 
 export default {
   components:{
       headTime,
-      comNav,
-      footers
+      comNav
   }
 }
 </script>

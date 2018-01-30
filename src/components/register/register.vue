@@ -18,7 +18,6 @@
                 @blur='pwdVerify'
                 id="pwd"
                 >
-                
                 </el-input>
                 <el-input
                 :placeholder="$t('account.lghint[3]')"
@@ -46,6 +45,7 @@
 
 import headTime from "../headTime.vue";
 import comNav from "../comNav.vue";
+import {mailReg,pwdReg} from '@/regular/regular'
 export default {
   data() {
     return {
@@ -62,9 +62,8 @@ export default {
   mounted() {},
   methods: {
     mailVerify(event) {
-      let myReg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
       //   console.log(this.mailbox)
-      if (myReg.test(this.mailbox)) {
+      if (mailReg.test(this.mailbox)) {
         this.mailLock = true;
         document.getElementById("mail").style.backgroundColor = "";
       } else {
@@ -82,8 +81,7 @@ export default {
       }
     },
     pwdVerify() {
-      let myReg = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[~!@#$%^&*()_+`\-={}:";'<>?,.\/]).{8,24}$/;
-      if (myReg.test(this.pwd)) {
+      if (pwdReg.test(this.pwd)) {
         this.pwdLock = true;
         document.getElementById("pwd").style.backgroundColor = "";
       } else {

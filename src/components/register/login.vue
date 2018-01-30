@@ -12,7 +12,10 @@
             type="password"
             clearable>
         </el-input>
-        <el-button >{{$t('account.btn[0]')}}</el-button>
+        <div class="btn">
+            <el-button >{{$t('account.btn[0]')}}</el-button>
+        </div>
+        
         <div class="help">
             <router-link to="register" class="help_account">{{$t('account.btn[1]')}}</router-link>
             <router-link to="" class="help_pwd">{{$t('account.btn[2]')}}</router-link>
@@ -47,7 +50,7 @@ export default {
   margin-top: 20px;
   font-size: 20px;
 }
-.el-button{
+.btn{
     margin-top: 20px;
 }
 .help{

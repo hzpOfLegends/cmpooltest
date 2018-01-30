@@ -44,5 +44,22 @@ module.exports = {
       lghint:['Please enter mailbox or mobile phone number','Please input a password','Please enter the mailbox address','Please enter the password again'],
       btn:['Sign in','Registered account','Forget the password','Now register','I agree','Terms of service']
     },
-    footer:['From','and','Pay attention to us.','The price of bitcoin is','provide']
+    footer:['From','and','Pay attention to us.','The price of bitcoin is','provide'],
+    myaccount: {
+      title: 'account',
+      setmail: {
+        title: 'Change information',
+        change:['If you want to modify the information, please enter the password first','To change your mailbox address, please enter a new mailbox and find a confirmation link in your old mailbox to click in.'],
+        mail:['Current mailbox','New mailbox'],
+      },
+      setpwd:{
+        title:'Change the password',
+        pwd:['Current password','New password','Enter the password again']
+      },
+      telphone:{
+        title:'Change the phone',
+        telbox:'Cell-phone number'
+      },
+      btn:['Reset','Submit']
+    }
 }

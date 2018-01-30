@@ -1,5 +1,5 @@
 <template>
-<el-container>
+<el-container style="position: relative;">
   <com-nav/>
   <el-main style="position: relative;">
       <head-time/>
@@ -102,7 +102,7 @@
         </el-col>
     </el-row>
   </el-main>
-    <el-footer class="foot">
+    <el-footer>
         <footers/>
     </el-footer>
 </el-container>   
@@ -128,6 +128,10 @@ export default {
 }
 .coin_btn {
   margin-top: 50px;
+  
+}
+.coin_btn h3{
+    text-align: center;
 }
 .coin_btn .bitcoin,
 .zcash {
@@ -153,18 +157,6 @@ export default {
 .intro {
   margin-top: 50px;
 }
-.foot {
-  background-color: rgb(211, 220, 230);
-  line-height: 60px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-.foot{
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    left: 0;
-}
+
 </style>
     
